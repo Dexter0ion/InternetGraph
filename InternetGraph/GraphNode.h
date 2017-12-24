@@ -6,9 +6,6 @@
 
 using namespace std;
 class GraphNode {
-    private:
-        string NodeName;
-        string IpAddress;
     public:
         GraphNode() {
             NodeName = "NULL";
@@ -26,6 +23,7 @@ class GraphNode {
         }
 
         GraphNode& operator=(const GraphNode &node) {
+            NodeName = node.NodeName;
             IpAddress = node.IpAddress;
             return *this;
         }
@@ -46,7 +44,9 @@ class GraphNode {
             return IpAddress;
         }
 
-
+    private:
+        string NodeName;
+        string IpAddress;
 };
 
 #endif
