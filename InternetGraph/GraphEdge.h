@@ -22,6 +22,22 @@ class GraphEdge{
 			isConnect = true;
 		}
 		
+		
+		GraphNode GetNode1(){
+			return N1; 
+		} 
+		
+		GraphNode GetNode2(){
+			return N2;
+		}
+		
+		int GetWeight(){
+			return weight;
+		}
+		
+		void SetWeight(int weight_){
+			weight = weight_;
+		}
 		bool getConnect(){
 			return isConnect;
 		}

@@ -17,4 +17,5 @@ int main(){
 		N--;
 	} 
 	M.DisplayMatrix();
+	M.ShortestPath_Floyd();
 }
