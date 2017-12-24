@@ -5,47 +5,48 @@
 #include <string>
 
 using namespace std;
-class GraphNode{
-	public:
-		GraphNode(){
-			NodeName = "NULL";
-			IpAddress = "127.0.0.1";	//本地地址 
-		}
-		
-		GraphNode(string Name){
-			NodeName = Name;
-			IpAddress = "127.0.0.1"; 
-		}
-		
-		GraphNode(string Name,string IP){
-			NodeName = Name;
-			IpAddress = IP; 
-		}
-		
-		GraphNode& operator=(const GraphNode &node){
-			IpAddress = node.IpAddress;
-			return *this;
-		}
-		
-		void setNodeName(string Name){
-			NodeName = Name;
-		}
-		
-		string getNodeName(){
-			return NodeName;
-		}
-		
-		void setIpAddress(string IP){
-			IpAddress = IP;
-		}
-		
-		string getIpAddress(){
-			return IpAddress;
-		}
-		
-	private:
-		string NodeName;
-		string IpAddress;
+class GraphNode {
+    private:
+        string NodeName;
+        string IpAddress;
+    public:
+        GraphNode() {
+            NodeName = "NULL";
+            IpAddress = "127.0.0.1";	//本地地址
+        }
+
+        GraphNode(string Name) {
+            NodeName = Name;
+            IpAddress = "127.0.0.1";
+        }
+
+        GraphNode(string Name,string IP) {
+            NodeName = Name;
+            IpAddress = IP;
+        }
+
+        GraphNode& operator=(const GraphNode &node) {
+            NodeName = node.NodeName;
+            IpAddress = node.IpAddress;
+            return *this;
+        }
+
+        void setNodeName(string Name) {
+            NodeName = Name;
+        }
+
+        string getNodeName() {
+            return NodeName;
+        }
+
+        void setIpAddress(string IP) {
+            IpAddress = IP;
+        }
+
+        string getIpAddress() {
+            return IpAddress;
+        }
 };
 
 #endif
+
